@@ -1,0 +1,34 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  min-height: 100vh;
+  background: #000;
+}
+.contain {
+  position: relative;
+
+  width: 200px;
+  height: 10px;
+  border-radius: 5px;
+  /* reflect兼容性差，慎用 */
+  -webkit-box-reflect: below 0 linear-gradient(transparent, white);
+  background: linear-gradient(to right,rgb(9, 85, 249),
+                                        rgb(189, 9, 249),
+                                        rgb(105, 249, 9),
+                                        rgb(105, 66, 246),
+                                        rgb(9, 249, 193),
+                                        rgb(9, 85, 249));
+  animation: animate 1s linear infinite;
+}
+@keyframes animate {
+  0% {
+    background-position: -200px 0;
+  }
+}
